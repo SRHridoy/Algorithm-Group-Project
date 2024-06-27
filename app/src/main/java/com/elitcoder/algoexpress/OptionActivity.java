@@ -56,19 +56,19 @@ public class OptionActivity extends AppCompatActivity {
         optionBinding.btnGraphTraversal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToGraphTraveralOptionActivity = new Intent(OptionActivity.this,GraphTraversalOptionActivity.class);
-                startActivity(goToGraphTraveralOptionActivity);
+                Intent goToGraphTraversalOptionActivity = new Intent(OptionActivity.this,GraphTraversalOptionActivity.class);
+                startActivity(goToGraphTraversalOptionActivity);
             }
         });
     }
 
-    //Button for All Pair Shortest Path :
+    //Button for FloydWarshallDescriptionActivity :
     private void buttonAllPairShortestPath(){
         optionBinding.btnAllPairShortest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToAllPairShortestActivity = new Intent(OptionActivity.this, AllPairShortestActivity.class);
-                startActivity(goToAllPairShortestActivity);
+                Intent goToFloydWarshallDesActivity = new Intent(OptionActivity.this, FloydWarshallDescriptionActivity.class);
+                startActivity(goToFloydWarshallDesActivity);
             }
         });
     }

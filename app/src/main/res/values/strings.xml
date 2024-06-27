@@ -4,4 +4,6 @@
     <string name="bubble_time_complexity">Time Complexity :\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Best: O(n) \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAverage: O(n^2)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Worst: O(n^2)\n\nSpace Complexity : O(1)</string>
     <string name="no_of_elements">Enter the no. of Elements</string>
     <string name="array_elements">Enter the array elements</string>
+    <string name="defination_warshall">Defination : The Floyd-Warshall algorithm, named after its creators Robert Floyd and Stephen Warshall, is a fundamental algorithm in computer science and graph theory. It is used to find the shortest paths between all pairs of nodes in a weighted graph. This algorithm is highly efficient and can handle graphs with both positive and negative edge weights, making it a versatile tool for solving a wide range of network and connectivity problems.</string>
+    <string name="complexity_floyd">Time Complexity: \tO(V3), where V is the number of vertices in the graph and we run three nested loops each of size V\n\n Auxiliary Space: \tO(V2), to create a 2-D matrix in order to store the shortest distance for each pair of nodes.</string>
 </resources>

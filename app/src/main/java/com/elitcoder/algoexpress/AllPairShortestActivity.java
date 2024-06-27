@@ -47,26 +47,41 @@ public class AllPairShortestActivity extends AppCompatActivity {
                     //Predefined values :
                     adj[1][1] = 0;
                     adj[1][2] = 3;
-                    adj[1][3] = 1000000000;
+                    adj[1][3] = 1000;
                     adj[1][4] = 7;
 
                     adj[2][1] = 8;
                     adj[2][2] = 0;
                     adj[2][3] = 2;
-                    adj[2][4] = 1000000000;
+                    adj[2][4] = 1000;
 
                     adj[3][1] = 5;
-                    adj[3][2] = 1000000000;
+                    adj[3][2] = 1000;
                     adj[3][3] = 0;
                     adj[3][4] = 1;
 
                     adj[4][1] = 2;
-                    adj[4][2] = 1000000000;
-                    adj[4][3] = 1000000000;
+                    adj[4][2] = 1000;
+                    adj[4][3] = 1000;
                     adj[4][4] = 0;
                     floydWarshall(4);
                     Toast.makeText(AllPairShortestActivity.this, "Successfully applied Floyd-Warshall!", Toast.LENGTH_LONG).show();
                 }else{
+                    //Converting to Int:
+                    int noOfNodes = Integer.parseInt(noOfNodesInput);
+                    //Store adj to mat:
+                    String[] rows = adjMatInput.split("\n");
+
+                    for (int i = 0; i < noOfNodes; i++) {
+                        String[] values = rows[i].split(" ");
+                        for (int j = 0; j < noOfNodes; j++) {
+                            adj[i+1][j+1] = Integer.parseInt(values[j]);
+                        }
+                    }
+
+                    //call floyd warshall :
+                    floydWarshall(noOfNodes);
+                    Toast.makeText(AllPairShortestActivity.this, "Successfully applied Floyd-Warshall!", Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -78,18 +93,18 @@ public class AllPairShortestActivity extends AppCompatActivity {
         //For efficient appending of results in every steps :
         StringBuilder sb = new StringBuilder();
 
-        for(int k = 1; k <= 4; k++){
-            for(int i = 1; i<=4; i++){
-                for(int j = 1; j<=4; j++){
+        for(int k = 1; k <= node; k++){
+            for(int i = 1; i<=node; i++){
+                for(int j = 1; j<=node; j++){
                     adj[i][j] = min(adj[i][j],adj[i][k]+adj[k][j]);
                 }
             }
             //Print in every step :
             // Append current step to StringBuilder
             sb.append("For ").append(k).append(" : \n");
-            for(int i = 1; i<=4; i++){
-                for(int j = 1; j<=4; j++){
-                    sb.append(adj[i][j]).append(" ");
+            for(int i = 1; i<=node; i++){
+                for(int j = 1; j<=node; j++){
+                    sb.append(adj[i][j] == 1000 ? "INF" : adj[i][j]).append(" ");
                 }sb.append("\n");
             }sb.append("\n\n");
 

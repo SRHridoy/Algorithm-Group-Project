@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".BubbleSortActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Floyd-Warshall"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:background="@drawable/layout_border"
+        android:backgroundTint="#00C853"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/defination_warshall"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:background="@drawable/layout_border"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/floyd_warshall"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/complexity_floyd"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:background="@drawable/layout_border"
+        />
+    <Button
+        android:id="@+id/btnAllPairShortest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#C51162"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Visualize Floyd-Warhsall"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+
+</LinearLayout>
