@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Algo Express</string>
     <string name="bubbleDefination">Defination : Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.</string>
+    <string name="bubble_time_complexity">Time Complexity :\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Best: O(n) \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAverage: O(n^2)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Worst: O(n^2)\n\nSpace Complexity : O(1)</string>
+    <string name="no_of_elements">Enter the no. of Elements</string>
+    <string name="array_elements">Enter the array elements</string>
 </resources>

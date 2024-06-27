@@ -45,7 +45,7 @@
             />
 
         <Button
-            android:id="@+id/btnInsertion Sort"
+            android:id="@+id/btnInsertionSort"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00C853"
