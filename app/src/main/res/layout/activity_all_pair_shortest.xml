@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".AllPairShortestActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Floyd Warshal Algorithm"
+                android:textColor="#121413"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:background="@drawable/layout_border"
+                android:backgroundTint="#00B8D4"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="For taking input of adjacency matrix if a node is unrechable from other node, please enter larger value (1e9)"
+                android:textColor="#5B565D"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                />
+            <EditText
+                android:id="@+id/edtNodes"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the no. of Nodes"
+                android:gravity="center"
+                android:textColorHint="#5D5353"
+                android:textSize="20sp"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/layout_border"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                />
+            <EditText
+                android:id="@+id/edtMatrix"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the Adjacency Matrix"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="#5D5353"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@drawable/layout_border"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If you don't want to enter values, press Apply Floyd Warshall button for pre-defined values."
+                android:textColor="#5B565D"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                />
+            <Button
+                android:id="@+id/btnApplyFloydWarshal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00C853"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:padding="12dp"
+                android:text="Apply Floyd Warshall"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/txtResultMat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="#00C853"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

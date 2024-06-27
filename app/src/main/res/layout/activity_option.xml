@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".OptionActivity">
+
+    <TextView
+        android:id="@+id/txt_topics"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_border"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:text="Topics:"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <Button
+            android:id="@+id/btnSortingAlgo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00C853"
+            android:padding="10dp"
+            android:text="Sorting Algorithms"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/btnGraphTraversal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00C853"
+            android:padding="10dp"
+            android:layout_marginTop="6dp"
+            android:text="Graph Traversal Algorithms"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+             />
+
+        <Button
+            android:id="@+id/btnAllPairShortest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00C853"
+            android:padding="10dp"
+            android:layout_marginTop="6dp"
+            android:text="All Pair Shortest Path"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+             />
+    </LinearLayout>
+
+
+</LinearLayout>
