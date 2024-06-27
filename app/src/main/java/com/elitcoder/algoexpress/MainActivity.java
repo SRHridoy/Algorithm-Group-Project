@@ -42,6 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToOption);
                 finish();
             }
-        },2000);
+        },1500);
     }
 }
