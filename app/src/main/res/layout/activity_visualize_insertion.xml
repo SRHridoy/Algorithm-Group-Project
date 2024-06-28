@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".VisualizeInsertionActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insertion Sort"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:background="@drawable/layout_border"
+                android:backgroundTint="#00C853"
+                android:gravity="center"
+                />
+            <EditText
+                android:id="@+id/edtNoOfElements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/no_of_elements"
+                android:gravity="center"
+                android:textColorHint="#5D5353"
+                android:textSize="20sp"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/layout_border"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                />
+            <EditText
+                android:id="@+id/edtElements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/array_elements"
+                android:gravity="center"
+                android:textColorHint="#5D5353"
+                android:textSize="20sp"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/layout_border"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                />
+            <Button
+                android:id="@+id/btnInsertionVisualize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#C51162"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Visualize Insertion Sort"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/txtInsertionResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
