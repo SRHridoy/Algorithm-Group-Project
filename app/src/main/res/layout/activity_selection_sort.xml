@@ -54,7 +54,7 @@ Best-case: O(n^2)\n
         android:background="@drawable/layout_border"
         />
     <Button
-        android:id="@+id/btnInsertionVisualize"
+        android:id="@+id/btnSelectionVisualize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

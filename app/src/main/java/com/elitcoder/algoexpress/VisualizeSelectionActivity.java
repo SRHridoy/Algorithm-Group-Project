@@ -10,43 +10,41 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.elitcoder.algoexpress.databinding.ActivityVisualizeInsertionBinding;
+import com.elitcoder.algoexpress.databinding.ActivityVisualizeSelectionBinding;
 
-public class VisualizeInsertionActivity extends AppCompatActivity {
-    ActivityVisualizeInsertionBinding visualizeInsertionBinding;
+public class VisualizeSelectionActivity extends AppCompatActivity {
+    ActivityVisualizeSelectionBinding visualizeSelectionBinding;
     String result;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        // view binding
-        visualizeInsertionBinding = ActivityVisualizeInsertionBinding.inflate(getLayoutInflater());
-        View view = visualizeInsertionBinding.getRoot();
+        //View bindig:
+        visualizeSelectionBinding = ActivityVisualizeSelectionBinding.inflate(getLayoutInflater());
+        View view = visualizeSelectionBinding.getRoot();
         setContentView(view);
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        //Visualize Insertion:
+        //Visualize selection:
         callVisulalizer();
     }
 
     private void callVisulalizer() {
-        visualizeInsertionBinding.btnInsertionVisualize.setOnClickListener(new View.OnClickListener() {
+        visualizeSelectionBinding.btnSelectionVisualize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                visualizeInsertion();
+                visualizeSelection();
             }
         });
     }
 
-    private void visualizeInsertion() {
-        String noOfElementsS = visualizeInsertionBinding.edtNoOfElements.getText().toString();
-        String elements = visualizeInsertionBinding.edtElements.getText().toString();
+    private void visualizeSelection() {
+        String noOfElementsS = visualizeSelectionBinding.edtNoOfElements.getText().toString();
+        String elements = visualizeSelectionBinding.edtElements.getText().toString();
 
         int noOfElements = Integer.parseInt(noOfElementsS);
 
@@ -61,29 +59,33 @@ public class VisualizeInsertionActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        //Insertion Sort:\
-        insertionSort(noOfElements,intArray);
-        Toast.makeText(this, "Successfully Insetion Sort Executed!", Toast.LENGTH_SHORT).show();
+        //Selection Sort:\
+        selectionSort(noOfElements,intArray);
+        Toast.makeText(this, "Successfully Selection Sort Executed!", Toast.LENGTH_SHORT).show();
     }
 
-    private void insertionSort(int n, int[] intArray) {
+    private void selectionSort(int n, int[] intArray) {
         StringBuilder sb = new StringBuilder();
-        for(int i = 1; i < n; i++){
-            sb.append("Pass ").append(i).append(" : \n");
-            int value = intArray[i];
-            int hole = i;
-            while(hole>0 && intArray[hole-1]>value){
-                intArray[hole] = intArray[hole-1];
-                hole--;
+        for(int i = 0; i < n-1; i++){
+            sb.append("Pass ").append(i+1).append(" : \n");
+            int min = Integer.MAX_VALUE;
+            int x=0;
+            for(int j = i; j < n; j++){
+                if(min>intArray[j]){
+                    min = intArray[j];
+                    x = j;
+                }
                 for(int k = 0; k<n;k++){
-                    if (k==hole) sb.append("__").append(" ");
-                    else sb.append(intArray[k]).append(" ");
+                    sb.append(intArray[k]).append(" ");
                 }sb.append("\n");
             }
-            intArray[hole] = value;
+            int temp = intArray[i];
+            intArray[i] = intArray[x];
+            intArray[x] = temp;
             for(int k = 0; k<n;k++){
                 sb.append(intArray[k]).append(" ");
-            }sb.append("\n\n");
+            }sb.append("\n");
+
         }
 
 
@@ -92,9 +94,10 @@ public class VisualizeInsertionActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                visualizeInsertionBinding.txtInsertionResult.setVisibility(View.VISIBLE);
-                visualizeInsertionBinding.txtInsertionResult.setText(result);
+                visualizeSelectionBinding.txtSelectionResult.setVisibility(View.VISIBLE);
+                visualizeSelectionBinding.txtSelectionResult.setText(result);
             }
         });
+
     }
 }

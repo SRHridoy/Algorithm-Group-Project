@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AlgoExpress"
         tools:targetApi="31">
         <activity
+            android:name=".VisualizeSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".VisualizeInsertionActivity"
             android:exported="false" />
         <activity
