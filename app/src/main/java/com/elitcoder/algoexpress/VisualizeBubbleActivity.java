@@ -68,14 +68,23 @@ public class VisualizeBubbleActivity extends AppCompatActivity {
         for(int i = 0; i < n-1; i++){
             sb.append("Pass ").append(i+1).append(" : \n");
             for(int j = 0; j<n-i-1;j++){
+                int tr1 = 0;
                 if(intArray[j]>intArray[j+1]){
                     int temp;
                     temp = intArray[j];
                     intArray[j] = intArray[j+1];
                     intArray[j+1] = temp;
+                    //Track:
+                    tr1 = j;
                 }
                 for(int k = 0; k<n;k++){
-                    sb.append(intArray[k]).append(" ");
+                    if(k==tr1) {
+                        sb.append("(").append(intArray[k]).append(" ");
+                    }else if(k==tr1+1){
+                        sb.append(intArray[k]).append(") ");
+                    }else{
+                        sb.append(intArray[k]).append(" ");
+                    }
                 }sb.append("\n");
             }sb.append("\n\n");
         }
