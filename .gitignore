@@ -13,8 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-*.png  
-*.jpg  
-*.jpeg  
-*.gif  
-screenshots/ 
+
